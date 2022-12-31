@@ -1,0 +1,48 @@
+.porto-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+.porto-item{
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+.porto-item:hover{
+    border-color: var(--color-primary-variant);
+    background: transparent;
+}
+.porto-img{
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.porto-img img{
+    height: 150px;
+}
+.porto-item h3{
+    margin: 1.2rem 0 2rem;
+}
+.porto-body{
+    height: 80px;
+}
+.porto-cta{
+    display: flex;
+    gap: 1rem;
+    margin-top: auto !important;
+}
+
+@media screen and (max-width: 1024px) {
+     .porto-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+     }
+  }
+
+  @media screen and (max-width: 600px) {
+    .porto-container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+  }
