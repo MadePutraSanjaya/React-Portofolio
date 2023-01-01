@@ -1,47 +1,51 @@
 import React from "react";
 import "./portofolio.css";
-import IMG1 from "../../assets/porto1.png";
-import IMG2 from "../../assets/porto2.png";
-import IMG3 from "../../assets/porto3.png";
-import IMG4 from "../../assets/porto4.png";
-import IMG5 from "../../assets/porto5.png";
+import {porto1, porto2, porto3, porto4, porto5, porto6} from "../../assets/image";
 
 function portofolio() {
   const Data = [
     {
       id: 1,
-      image: IMG1,
+      image: porto1,
       title: "Slukat Learning Center Website",
       alt: "Slukat Learning Center Website",
       live: "https://slukatbali.or.id",
     },
     {
       id: 2,
-      image: IMG2,
+      image: porto2,
       title: "Quality Care Rental Bali Website",
       alt: "Quality Care Rental Bali Website",
       live: "https://qucarentalbali.com",
     },
     {
       id: 3,
-      image: IMG3,
+      image: porto3,
       title: "Kampung Kode Website ",
       alt: "Kampung Kode Website",
       live: "https://kampungkode.org",
     },
     {
       id: 4,
-      image: IMG4,
+      image: porto4,
       title: "Peak Season Website",
       alt: "Peak Season Website",
       live: "https://peakseason.id",
     },
     {
       id: 5,
-      image: IMG5,
+      image: porto5,
       title: "E Club Ubud Website",
       alt: "E Club Ubud Website",
       live: "https://eclububud.com",
+    },
+    ,
+    {
+      id: 6,
+      image: porto6,
+      title: "Movie Website",
+      alt: "E Club Ubud Website",
+      live: "https://movietmdb.vercel.app",
     },
   ];
   return (
