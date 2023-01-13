@@ -1,17 +1,11 @@
-import { React, useState } from "react";
-import NotFound from "./notFound";
+import { React } from "react";
+import CV from "../../assets/MadeSanjaya.pdf";
 function CTA() {
-  let [img, setImg] = useState('https://google.com')
-
-  const handleChange = () => {
-    return setImg(!img)
-  }
-  
 
   return (
     <div className='cta'>
-        <a onClick={() => handleChange()} className='btn'>
-          {img ? 'Download CV' : <NotFound /> }
+        <a href={CV} download className='btn'>
+          Download CV
         </a>
         <a href="#contact" className='btn btn-primary'>Contact Me</a>
     </div>
