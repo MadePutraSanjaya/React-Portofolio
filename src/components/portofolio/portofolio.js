@@ -1,6 +1,6 @@
 import React from "react";
 import "./portofolio.css";
-import {porto1, porto2, porto3, porto4, porto5, porto6} from "../../assets/image";
+import {porto1, porto2, porto3, porto4, porto5, porto6, porto7} from "../../assets/image";
 
 function portofolio() {
   const Data = [
@@ -44,8 +44,15 @@ function portofolio() {
       id: 6,
       image: porto6,
       title: "Movie Website",
-      alt: "E Club Ubud Website",
+      alt: "Movie Website",
       live: "https://movietmdb.vercel.app",
+    },
+    {
+      id: 7,
+      image: porto7,
+      title: "The Ulam Ikan Bakar Website",
+      alt: "The Ulam Ikan Bakar Website",
+      live: "https://theulambali.com",
     },
   ];
   
