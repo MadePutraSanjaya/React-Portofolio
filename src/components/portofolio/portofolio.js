@@ -15,7 +15,7 @@ function Portofolio() {
   
 
   const renderData = () => {
-   
+    
     const start = (currentPage - 1) * PAGE_SIZE;
     const end = start + PAGE_SIZE;
     const dataPorto = Data.slice(start, end);
