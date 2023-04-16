@@ -1,90 +1,80 @@
-import React from "react";
+import {React, useState} from "react";
 import "./portofolio.css";
-import {porto1, porto2, porto3, porto4, porto5, porto6, porto7} from "../../assets/image";
+import Data from "../Data/data";
+const PAGE_SIZE = 6;
 
-function portofolio() {
-  const Data = [
-    {
-      id: 1,
-      image: porto1,
-      title: "Slukat Learning Center Website",
-      alt: "Slukat Learning Center Website",
-      live: "https://slukatbali.or.id",
-    },
-    {
-      id: 2,
-      image: porto2,
-      title: "Quality Care Rental Bali Website",
-      alt: "Quality Care Rental Bali Website",
-      live: "https://qucarentalbali.com",
-    },
-    {
-      id: 3,
-      image: porto3,
-      title: "Kampung Kode Website ",
-      alt: "Kampung Kode Website",
-      live: "https://kampungkode.org",
-    },
-    {
-      id: 4,
-      image: porto4,
-      title: "Peak Season Website",
-      alt: "Peak Season Website",
-      live: "https://peakseason.id",
-    },
-    {
-      id: 5,
-      image: porto5,
-      title: "E Club Ubud Website",
-      alt: "E Club Ubud Website",
-      live: "https://eclububud.com",
-    },
-    ,
-    {
-      id: 6,
-      image: porto6,
-      title: "Movie Website",
-      alt: "Movie Website",
-      live: "https://movietmdb.vercel.app",
-    },
-    {
-      id: 7,
-      image: porto7,
-      title: "The Ulam Ikan Bakar Website",
-      alt: "The Ulam Ikan Bakar Website",
-      live: "https://theulambali.com",
-    },
-  ];
+function Portofolio() {
+
+
+   const [currentPage, setCurrentPage] = useState(1);
+   const totalPages = Math.ceil(Data.length / PAGE_SIZE);
+
+   const handleClick = (page) => {
+     setCurrentPage(page);
+   };
   
+
+  const renderData = () => {
+   
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
+    const dataPorto = Data.slice(start, end);
+
+    return dataPorto.map(({ id, image, title, github, live }) => (
+      <article key={id} className="porto-item">
+        <div className="porto-img">
+          <img src={image} alt={title} />
+        </div>
+        <div className="porto-body">
+          <h3>{title}</h3>
+        </div>
+        <div className="porto-cta">
+          <a
+            href={live}
+            className="btn btn-primary"
+            target="_blank"
+            style={{ width: "100%", textAlign: "center" }}
+          >
+            Preview Website
+          </a>
+        </div>
+      </article>
+    ));
+  };
+
+  const renderPagination = () => {
+    const pages = [];
+
+   for (let i = 1; i <= totalPages; i++) {
+     const isActive = currentPage === i;
+     pages.push(
+       <button
+         key={i}
+         onClick={() => handleClick(i)}
+         className={isActive ? "active" : ""} 
+       >
+         {i}
+       </button>
+     );
+   }
+
+
+    return pages;
+  };
+
+
   return (
     <section id="portofolio">
       <h5>My Recent Work</h5>
       <h2>Portofolio</h2>
 
       <div className="container porto-container">
-        {Data.map(({ id, image, title, github, live }) => (
-            <article key={id} className="porto-item">
-              <div className="porto-img">
-                <img src={image} alt={title} />
-              </div>
-              <div className="porto-body">
-              <h3>{title}</h3>
-              </div>
-              <div className="porto-cta">
-                <a
-                  href={live}
-                  className="btn btn-primary"
-                  target="_blank"
-                  style={{ width: "100%", textAlign: "center"}}
-                >
-                  Preview Website
-                </a>
-              </div>
-            </article>
-        ))}
+        {renderData()}
+       
       </div>
+        <div className="container pagination-top">{renderPagination()}</div>
     </section>
   );
 }
 
-export default portofolio;
+export default Portofolio;
