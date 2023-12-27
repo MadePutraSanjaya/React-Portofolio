@@ -36,21 +36,21 @@ function exp() {
             <article className="exp-detail">
               <MdVerified className="exp-detail-icon" />
               <div>
-                <h4>Vue Js</h4>
+                <h4>Next Js</h4>
                 <small className="text-light">Intermediate</small>
               </div>
             </article>
             <article className="exp-detail">
               <MdVerified className="exp-detail-icon" />
               <div>
-                <h4>Bootstrap</h4>
-                <small className="text-light">Advance</small>
+                <h4>Typescript</h4>
+                <small className="text-light">Intermediate</small>
               </div>
             </article>
             <article className="exp-detail">
               <MdVerified className="exp-detail-icon" />
               <div>
-                <h4>Sass</h4>
+                <h4>Ant Design</h4>
                 <small className="text-light">Intermediate</small>
               </div>
             </article>
@@ -85,7 +85,7 @@ function exp() {
             <article className="exp-detail">
               <MdVerified className="exp-detail-icon" />
               <div>
-                <h4>Mysql</h4>
+                <h4>Nest Js</h4>
                 <small className="text-light">Experienced</small>
               </div>
             </article>

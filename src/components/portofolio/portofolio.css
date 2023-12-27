@@ -1,74 +1,114 @@
-.porto-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+.porto-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
 }
-.porto-item{
-    background: var(--color-bg-variant);
-    padding: 1.2rem;
-    border-radius: 1rem;
-    border: 1px solid transparent;
-    transition: var(--transition);
+
+.porto-description {
+  display: none;
+  margin-top: 1rem;
 }
-.porto-item:hover{
-    border-color: var(--color-primary-variant);
-    background: transparent;
+.porto-description p {
+    font-size: 12px;
+    font-weight: 300;
 }
-.porto-img{
-    border-radius: 1rem;
-    overflow: hidden;
+.porto-description ul li {
+    list-style: disc !important;
+    font-size: 12px;
+    font-weight: 300;
 }
-.porto-img img{
-    height: 150px;
+.porto-description ul {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-.porto-item h3{
-    margin: 1.2rem 0 2rem;
+
+.porto-item.active .porto-description {
+  display: block;
 }
-.porto-body{
-    height: 80px;
+
+.porto-item {
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  
 }
-.porto-cta{
-    display: flex;
-    gap: 1rem;
-    margin-top: auto !important;
+
+.porto-item:hover {
+  border-color: var(--color-primary-variant);
+  background: transparent;
 }
-button{
-   background-color: transparent ;
-  border: 1px solid #5ABBFF !important;
-  color: #5ABBFF;
+
+.porto-img {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.porto-img img {
+  height: 200px;
+}
+
+.porto-item h3 {
+  margin: 1.2rem 0 0;
+}
+
+.porto-body {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.porto-description {
+  display: none;
+  margin-top: 1rem;
+}
+
+.porto-cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto !important;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #5abbff !important;
+  color: #5abbff;
   cursor: pointer;
   margin: 0 5px;
   padding: 5px 10px;
   transition: all 0.3s ease;
-    margin-top: 2em;
-    text-align: center;
+  margin-top: 2em;
+  text-align: center;
 }
-button.active{
-    background-color: #5ABBFF ;
-  border-color: #5ABBFF ;
+
+button.active {
+  background-color: #5abbff;
+  border-color: #5abbff;
   color: #fff;
 }
 
 button:hover {
- background-color: #5ABBFF ;
-  border-color: #5ABBFF ;
+  background-color: #5abbff;
+  border-color: #5abbff;
   color: #fff;
-
 }
+
 .pagination-top {
-    text-align: center;
+  text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
-     .porto-container{
-        grid-template-columns: 1fr 1fr;
-        gap: 1.2rem;
-     }
+  .porto-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
   }
+}
 
-  @media screen and (max-width: 600px) {
-    .porto-container{
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+@media screen and (max-width: 600px) {
+  .porto-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
+}
