@@ -63,7 +63,7 @@ I worked with the development team, I actively engaged in team meetings, contrib
     title: "Astraland",
     alt: "Astraland",
     description: `<p>
- During my internship at PT. Vanz Innovative Technology (Qbit), I contributed to the development of the Astraland web project in the property industry. My responsibilities included:
+ During my internship at PT. Vanz Inovatif Teknologi (Qbit), I contributed to the development of the Astraland web project in the property industry. My responsibilities included:
 </p>
 <p>
   <ul>
